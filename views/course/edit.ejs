@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>edit a course</h2>
+    <form action="/course/update/<%=cid%>" method="POST">
+        <label for="name">Course Name</label>
+        <input type="text" name="name" value="<%= course.name%>">
+        <label for="duration">Course Duration</label>
+        <input type="text" name="duration" value="<%= course.duration%>">
+        <label for="fees">Fees</label>
+        <input type="number" name="fees" value="<%= course.fees%>">
+        <div class="row">
+            <input type='submit' class="btn" value="submit">
+            <a href="/" class="btn">back</a>
+        </div>
+       
+    </form>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>welcome to Course Management.</h1><br>
+
+    <h2>Course Table:</h2>
+    <a href="/course/add"><button class="btn">Add</button></a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>SI.no</th>
+                <th>Course Name</th>
+                <th>Course Duration</th>
+                <th>Course Fees</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0;i<course.length;i++){ %>
+            <tr>
+                <td><%= i+1 %></td>
+                <td><%= course[i].name %></td>
+                <td><%= course[i].duration %></td>
+                <td><%= course[i].fees %></td>
+                <td>
+                    <a href="/course/edit/<%= course[i].id%>"><button class="btn">edit</button></a>
+                    <a href="/course/delete/<%= course[i].id%>"><button class="btn">delete</button></a>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
